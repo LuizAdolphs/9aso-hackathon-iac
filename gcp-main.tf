@@ -23,7 +23,7 @@ resource "google_sql_database_instance" "instance" {
 
 resource "google_sql_user" "users" {
   name     = "hackathon-database-user"
-  instance = google_sql_database_instance.main.name
+  instance = google_sql_database_instance.instance.name
   host     = "hackathon-database.com"
   password = "hackathon-database-123"
 }
